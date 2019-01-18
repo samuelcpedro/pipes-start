@@ -1,7 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false
+  /**
+   * pure: false
+   * will make sure that whenever we change data on the page our pipe is
+   * recalculated you could say. So this might lead to performance issues.
+   **/
 })
 export class FilterPipe implements PipeTransform {
 
